@@ -18,13 +18,26 @@ body {
   @include flexrow;
 
   img {
-    width: 10%;
+    width: 25%;
     height: auto;
+    
+     @include responsive-mobile {
+      width: 25%;
+    }
+
+    @include responsive-tablet {
+      width: 20%;
+    }
   }
 
   &__logo {
     flex-basis: 45%;
     text-align: end;
+    margin: $margin_xl $margin_base;
+
+    @include responsive-mobile {
+      margin: $margin_base;
+    }
   }
 
   &__title {
@@ -32,8 +45,18 @@ body {
     color: #A8763E;
     font-family: $font-barrio;
     justify-content: flex-start;
-    margin: $margin_l 0;
+    ;
     padding: 8px 0;
+    font-size: 2.4rem;
+  }
+
+  @include responsive-mobile {
+    font-size: 3rem;
+    margin: $margin_l 0
+  }
+
+  @include responsive-tablet {
+    font-size: 4rem;
   }
 
 }
@@ -54,14 +77,6 @@ body {
 
     width: 50%;
     height: auto;
-
-    @include responsive-tablet {
-      width: 50%;
-    }
-
-    @include responsive-mobile {
-      width: 75%;
-    }
   }
 
   &__text {

@@ -1,5 +1,5 @@
 import Image from "next/image"
-import Logo from '../../../public/logo.png'
+import Logo from '../../../public/cocktail-logo.svg'
 
 const Header = () => {
     return (
@@ -7,7 +7,7 @@ const Header = () => {
             <div className="header__logo">
                 <Image src={Logo} alt="logo" />
             </div>
-            <h1 className="header__title">Cocktail Recipe</h1>
+            <h1 className="header__title">Cocktail</h1>
         </header>
     )
 }
