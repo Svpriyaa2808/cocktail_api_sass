@@ -1,0 +1,38 @@
+@import '../styles/mixin';
+@import '../styles/variables';
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  background-color: $color-ebony;
+  margin: 0;
+  padding: 0;
+  @include flexrow;
+
+  img {
+    width: 10%;
+    height: auto;
+  }
+
+  &__logo {
+    flex-basis: 45%;
+    text-align: end;
+  }
+
+  &__title {
+    flex-basis: 55%;
+    color: #A8763E;
+    font-family: $font-barrio;
+    justify-content: flex-start;
+    margin: $margin_l 0;
+    padding: 8px 0;
+  }
+}
