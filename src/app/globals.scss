@@ -35,4 +35,55 @@ body {
     margin: $margin_l 0;
     padding: 8px 0;
   }
+
+}
+
+.search {
+
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: $margin_l;
+
+  @include responsive-mobile {
+    flex-direction: row;
+  }
+
+  img {
+
+    width: 50%;
+    height: auto;
+
+    @include responsive-tablet {
+      width: 50%;
+    }
+
+    @include responsive-mobile {
+      width: 75%;
+    }
+  }
+
+  &__text {
+    margin: $margin_l;
+    font-size: 22px;
+    font-family: $font-electrolize;
+  }
+
+
+  &__box {
+    
+    display: flex;
+
+    &--inuput {
+     padding: $margin_l;
+
+  }
+
+  &--button {
+    background-color: $color-copper;
+    border: none;
+  }
+  }
+  
 }
