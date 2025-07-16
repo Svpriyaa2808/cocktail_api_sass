@@ -2,3 +2,15 @@
     display: flex;
     justify-content: space-between;
 }
+
+@mixin responsive-tablet {
+    @media screen and (min-width: $breakpoint-tablet) {
+        @content;
+    }
+}
+
+@mixin responsive-mobile {
+    @media screen and (min-width: $breakpoint-mobile) {
+        @content;     
+    }
+} 

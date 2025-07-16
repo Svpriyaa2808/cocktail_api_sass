@@ -18,13 +18,22 @@ body {
   @include flexrow;
 
   img {
-    width: 10%;
+    width: 25%;
     height: auto;
+    
+     @include responsive-mobile {
+      width: 25%;
+    }
+
+    @include responsive-tablet {
+      width: 15%;
+    }
   }
 
   &__logo {
     flex-basis: 45%;
     text-align: end;
+    margin: $margin_xxl $margin_base;
   }
 
   &__title {
@@ -32,7 +41,63 @@ body {
     color: #A8763E;
     font-family: $font-barrio;
     justify-content: flex-start;
-    margin: $margin_l 0;
-    padding: 8px 0;
+    padding: $margin_l 0;
+    font-size: 2rem;
+    margin: $margin_xl 0;
+  
+
+  @include responsive-mobile {
+    font-size: 3rem;
+    align-content: center;
+    margin: $margin_base 0;
   }
+
+  @include responsive-tablet {
+    font-size: 4rem;
+  }
+
+}
+
+}
+
+.search {
+
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: $margin_l;
+
+  @include responsive-tablet {
+    flex-direction: row;
+  }
+
+  img {
+
+    width: 50%;
+    height: auto;
+  }
+
+  &__text {
+    margin: $margin_l;
+    font-size: 22px;
+    font-family: $font-electrolize;
+  }
+
+
+  &__box {
+    
+    display: flex;
+
+    &--inuput {
+     padding: $margin_l;
+
+  }
+
+  &--button {
+    background-color: $color-copper;
+    border: none;
+  }
+  }
+  
 }
