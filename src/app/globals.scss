@@ -26,18 +26,14 @@ body {
     }
 
     @include responsive-tablet {
-      width: 20%;
+      width: 15%;
     }
   }
 
   &__logo {
     flex-basis: 45%;
     text-align: end;
-    margin: $margin_xl $margin_base;
-
-    @include responsive-mobile {
-      margin: $margin_base;
-    }
+    margin: $margin_xxl $margin_base;
   }
 
   &__title {
@@ -45,19 +41,22 @@ body {
     color: #A8763E;
     font-family: $font-barrio;
     justify-content: flex-start;
-    ;
-    padding: 8px 0;
-    font-size: 2.4rem;
-  }
+    padding: $margin_l 0;
+    font-size: 2rem;
+    margin: $margin_xl 0;
+  
 
   @include responsive-mobile {
     font-size: 3rem;
-    margin: $margin_l 0
+    align-content: center;
+    margin: $margin_base 0;
   }
 
   @include responsive-tablet {
     font-size: 4rem;
   }
+
+}
 
 }
 
@@ -69,7 +68,7 @@ body {
   align-items: center;
   margin: $margin_l;
 
-  @include responsive-mobile {
+  @include responsive-tablet {
     flex-direction: row;
   }
 
