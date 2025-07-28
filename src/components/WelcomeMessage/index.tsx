@@ -1,5 +1,4 @@
-import Image from "next/image"
-import Cocktail from '../../../public/blue-lagoon-cocktail.jpg'
+import './welcomemessage.scss';
 const WelcomeMessage = () => {
     return (
         <div className="intro">
@@ -14,8 +13,6 @@ const WelcomeMessage = () => {
                 <img src="/blue-lagoon-cocktail.jpg" alt="blue-lagoon-cocktail"></img>
             </div>
         </div>
-    
-
     )
 }
 

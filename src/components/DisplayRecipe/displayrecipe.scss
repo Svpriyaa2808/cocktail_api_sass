@@ -1,0 +1,47 @@
+@import '../../styles/mixin';
+@import '../../styles/variables';
+
+.displayrecipe {
+    background-color: $color-ebony;
+    margin: $margin_l 10%;
+    box-shadow: 2px 2px 2px 2px;
+    padding-bottom: $margin_base;
+    &__image {
+        width: 50%;
+        height: auto;
+        max-width: 200px;
+
+        @include responsive-mobile {
+            max-width: 300px;
+        }
+    }
+
+    &__title {
+       @include title;
+       text-align: left;
+       margin: $margin_l;
+       padding: $margin_l $margin_base;
+    }
+
+    &__info {
+       text-align: left;
+       margin: $margin_l;
+       color: white;
+
+       &--title {
+        @include title;
+        text-align: left;
+       }
+
+       &--content {
+        text-indent: 30px;
+        font-size: 16px;
+        font-family: $font-electrolize;
+        margin:$margin_base ;
+
+        @include responsive-lg {
+            font-size: 20px;
+        }
+       }
+    }
+}

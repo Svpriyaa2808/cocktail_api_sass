@@ -1,4 +1,6 @@
-export interface CocktailDataType : {
+export interface CocktailDataType {
     name: string,
-    image:string
+    instruction : string,
+    image:string,
+    requiredIngredients:string[]
 }

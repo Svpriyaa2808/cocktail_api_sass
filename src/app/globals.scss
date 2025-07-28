@@ -62,75 +62,21 @@ body {
 
 
 .recipe {
-  @include flexcolumn;
+ 
   margin: $margin_l 0;
 
   &__button {
-    background-color: $color-copper;
-    font-family: $font-electrolize;
-    padding: $margin_l;
-    font-size: 20px;
-    font-weight: bold;
-    border: none;
-    cursor:pointer;
-  }
-}
-
-.intro {
-  
-  color: white;
-  @include flexcolumn;
-  margin: $margin_l 0;
-
-  @include responsive-tablet {
-    flex-direction: row;
-    justify-content:space-evenly;
-    background-color: black;
-  }
-
-  &__content {
-    background-color: black;
     @include flexcolumn;
-    @include responsive-tablet {
-       flex-basis: 50%;
-    }
 
-    &--title {
-      font-family: $font-barrio;
-      text-align: center;
-      color: $color-copper;
-      font-size: 20px;
-
-      @include responsive-lg {
-        font-size: 2rem;
-      }
-    }
-
-    &--para {
-      font-size: 16px;
-      font-family: $font-electrolize;
-      margin: $margin_base $margin_l;
-      text-align: justify;
-
-      @include responsive-lg{
-        font-size: 1.2rem;
-      }
+    &--button {
+      @include button;
     }
   }
 
-  &__image {
-    @include responsive-tablet{
-      flex-basis: 50%;
-    }
-    
-    img {
-      width: 100%;
-      height: auto;
-
-      @include responsive-tablet {
-        width: 100%;
-        height: auto;
-      }
+  &__container {
+    text-align: center;
+    &--button {
+      @include button;
     }
   }
 }
