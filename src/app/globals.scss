@@ -60,44 +60,23 @@ body {
 
 }
 
-.search {
 
-  justify-content: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: $margin_l;
+.recipe {
+ 
+  margin: $margin_l 0;
 
-  @include responsive-tablet {
-    flex-direction: row;
+  &__button {
+    @include flexcolumn;
+
+    &--button {
+      @include button;
+    }
   }
 
-  img {
-
-    width: 50%;
-    height: auto;
+  &__container {
+    text-align: center;
+    &--button {
+      @include button;
+    }
   }
-
-  &__text {
-    margin: $margin_l;
-    font-size: 22px;
-    font-family: $font-electrolize;
-  }
-
-
-  &__box {
-    
-    display: flex;
-
-    &--inuput {
-     padding: $margin_l;
-
-  }
-
-  &--button {
-    background-color: $color-copper;
-    border: none;
-  }
-  }
-  
 }

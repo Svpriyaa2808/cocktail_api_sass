@@ -3,6 +3,43 @@
     justify-content: space-between;
 }
 
+@mixin flexcolumn {
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@mixin button {
+    background-color: $color-copper;
+    padding: $margin_l;
+    border: none;
+    cursor:pointer;
+
+    font: {
+        family : $font-electrolize;
+        size : 20px;
+        weight: bold;
+    }
+}
+
+@mixin title {
+    font-family: $font-barrio;
+    text-align: center;
+    color: $color-copper;
+    font-size: 20px;
+    margin: $margin_base;
+    @include responsive-lg {
+        font-size: 2rem;
+    }
+}
+
+@mixin responsive-lg {
+    @media screen and (min-width: $breakpoint-lg) {
+        @content;
+    }
+}
+
 @mixin responsive-tablet {
     @media screen and (min-width: $breakpoint-tablet) {
         @content;
