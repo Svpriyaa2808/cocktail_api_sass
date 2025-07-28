@@ -60,44 +60,57 @@ body {
 
 }
 
-.search {
 
-  justify-content: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: $margin_l;
+.recipe {
+  @include flexcolumn;
+  margin: $margin_l 0;
 
-  @include responsive-tablet {
-    flex-direction: row;
-  }
-
-  img {
-
-    width: 50%;
-    height: auto;
-  }
-
-  &__text {
-    margin: $margin_l;
-    font-size: 22px;
-    font-family: $font-electrolize;
-  }
-
-
-  &__box {
-    
-    display: flex;
-
-    &--inuput {
-     padding: $margin_l;
-
-  }
-
-  &--button {
+  &__button {
     background-color: $color-copper;
+    font-family: $font-electrolize;
+    padding: $margin_l;
+    font-size: 20px;
+    font-weight: bold;
     border: none;
+    cursor:pointer;
   }
+}
+
+.intro {
+  background-color: black;
+  color: white;
+  @include flexcolumn;
+  margin: $margin_l 0;
+
+  @include responsive-lg {
+    flex-direction: row;
+     justify-content:space-evenly;
   }
-  
+
+  &__content {
+    flex-basis: 50%;
+    @include flexcolumn;
+    
+    &--title {
+      font-size: 2rem;
+      font-family: $font-barrio;
+      text-align: center;
+      color: $color-copper;
+    }
+
+    &--para {
+      font-size: 1.2rem;
+      font-family: $font-electrolize;
+      margin: $margin_base;
+    }
+  }
+
+  &__image {
+    flex-basis: 50%;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
 }
