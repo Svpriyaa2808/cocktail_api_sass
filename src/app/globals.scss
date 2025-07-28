@@ -77,40 +77,60 @@ body {
 }
 
 .intro {
-  background-color: black;
+  
   color: white;
   @include flexcolumn;
   margin: $margin_l 0;
 
-  @include responsive-lg {
+  @include responsive-tablet {
     flex-direction: row;
-     justify-content:space-evenly;
+    justify-content:space-evenly;
+    background-color: black;
   }
 
   &__content {
-    flex-basis: 50%;
+    background-color: black;
     @include flexcolumn;
-    
+    @include responsive-tablet {
+       flex-basis: 50%;
+    }
+
     &--title {
-      font-size: 2rem;
       font-family: $font-barrio;
       text-align: center;
       color: $color-copper;
+      font-size: 20px;
+
+      @include responsive-lg {
+        font-size: 2rem;
+      }
     }
 
     &--para {
-      font-size: 1.2rem;
+      font-size: 16px;
       font-family: $font-electrolize;
-      margin: $margin_base;
+      margin: $margin_base $margin_l;
+      text-align: justify;
+
+      @include responsive-lg{
+        font-size: 1.2rem;
+      }
     }
   }
 
   &__image {
-    flex-basis: 50%;
-
+    @include responsive-tablet{
+      flex-basis: 50%;
+    }
+    
     img {
       width: 100%;
       height: auto;
+
+      @include responsive-tablet {
+        width: 100%;
+        height: auto;
+      }
     }
   }
 }
