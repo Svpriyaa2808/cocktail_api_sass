@@ -1,10 +1,21 @@
-import Image from "next/image";
-import Cocktai from '../../public/cocktails.jpg';
+'use client'
+import {useState} from 'react'
+import {CocktailDataType} from '@/utils/types';
+import DisplayRecipe from '@/components/Displayrecipe'
 
-export default function Home() {
+export default function Home({inputValue}) {
+
+  // const [recipe,setRecipe] = useState<CocktailDataType|null>(null) 
+  // const fetchRecipe = async(): Promise<void> => {
+  //   try {
+  //     const API_URL: string = "https://www.thecocktaildb.com/api/json/v1/1/search.php?f="
+  //           const response: Response = await fetch(`${API_URL}${inputValue}`)
+  //           const data = await response.json();
+  //   }
+  // }
   return (
-    <div className="home">
-    
-    </div>
+ <>
+ {inputValue && <p>hi</p>}
+ </>
   );
 }
