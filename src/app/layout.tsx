@@ -1,16 +1,18 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Electrolize, Barrio } from "next/font/google";
 import "./globals.scss";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const electrolizeSans = Electrolize({
+  weight:["400"],
+  variable: "--font-electrolize-sans",
   subsets: ["latin"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const barrio = Barrio({
+  weight:["400"],
+  variable: "--font-barrio-sans",
   subsets: ["latin"],
 });
 
@@ -26,7 +28,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
+      <body className={`${electrolizeSans.variable} ${barrio.variable}`}>
         <Header />
         {children}
         <Footer />
