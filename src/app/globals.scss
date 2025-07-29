@@ -89,8 +89,7 @@ body {
   font-weight: bold;
 
   &__content {
-    display: flex;
-    flex-direction: column;
+    @include flexcolumn;
     margin: $margin_l;
 
     @include responsive-tablet {
@@ -98,11 +97,21 @@ body {
     }
 
     &--text {
-      p{
-        margin:  0;
-       
+      text-align: center;
+      @include responsive-tablet {
+        text-align: justify;
       }
-      
+      p{
+        margin:$margin_base  0;
+       
+      } 
+    }
+
+    &--logo {
+      margin: $margin_base;
+      svg {
+        margin: $margin_base 0;
+      }
     }
   }
 
