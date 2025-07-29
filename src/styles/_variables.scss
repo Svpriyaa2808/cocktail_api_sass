@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Electrolize&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Barrio&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Electrolize&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Barrio&display=swap');
 @import './mixin';
 
 
@@ -10,8 +10,8 @@ $margin_xl : $margin_base*3;
 $margin_xxl : $margin_base*4;
 
 //font
-$font-electrolize :  "Electrolize", sans-serif;
-$font-barrio : "Barrio", system-ui;
+$font-electrolize :  var(--font-electrolize-sans);
+$font-barrio : var(--font-barrio-sans);
 
 //colours
 
