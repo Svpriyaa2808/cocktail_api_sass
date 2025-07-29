@@ -80,3 +80,42 @@ body {
     }
   }
 }
+
+.footer {
+  background-color: $color-ebony;
+  color: $color-copper;
+  font-size: 18px;
+  font-family: $font-electrolize;
+  font-weight: bold;
+
+  &__content {
+    @include flexcolumn;
+    margin: $margin_l;
+
+    @include responsive-tablet {
+      @include flexrow;
+    }
+
+    &--text {
+      text-align: center;
+      @include responsive-tablet {
+        text-align: justify;
+      }
+      p{
+        margin:$margin_base  0;
+       
+      } 
+    }
+
+    &--logo {
+      margin: $margin_base;
+      svg {
+        margin: $margin_base 0;
+      }
+    }
+  }
+
+  &__copytext {
+    text-align: center;
+  }
+}
