@@ -5,8 +5,14 @@
   box-sizing: border-box;
 }
 
+html {
+  height: 100vh;
+  margin: 0;
+}
+
 body {
   margin: 0;
+  height: 100%;
   display: flex;
   flex-direction: column;
 }
@@ -31,13 +37,19 @@ body {
   }
 
   &__logo {
-    flex-basis: 45%;
+    flex-basis: 40%;
+    @include responsive-lg{
+      flex-basis: 45%;
+    }
     text-align: end;
     margin: $margin_xxl $margin_base;
   }
 
   &__title {
-    flex-basis: 55%;
+    flex-basis: 60%;
+    @include responsive-lg {
+      flex-basis: 55%;
+    }
     color: #A8763E;
     font-family: $font-barrio;
     justify-content: flex-start;
@@ -57,12 +69,10 @@ body {
   }
 
 }
-
 }
 
-
 .recipe {
- 
+  flex-grow: 1;
   margin: $margin_l 0;
 
   &__button {
